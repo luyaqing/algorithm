@@ -36,7 +36,7 @@ public class 最大网络秩 {
         for (int i = 0; i <n-1 ; i++) {
             for (int j = i+1; j <n ; j++) {
                 // 出度的意思是，计算顶点出现的次数， 邻接矩阵中为1的表示是重复的边
-                int temp = degree[i]+degree[j]-map[i][j]; //出度和减去重复的边   
+                int temp = degree[i]+degree[j]-map[i][j]; //出度和减去重复的边
                 ans = Math.max(ans,temp);
             }
         }
