@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 找到数组中最大的m个数， 返回一个数组出来
  */
-public class FindMaxMNumer {
+public class FindMaxMNumber {
 
     public static int[] getMaxMNumbers(int[] arr, int m) {
         if (m == 0 || arr.length == 0) {
