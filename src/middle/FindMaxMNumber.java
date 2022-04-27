@@ -49,6 +49,7 @@ public class FindMaxMNumber {
         int pos = array[start];
         int i = start, j = end + 1;
 
+
         while (true) {
             while (++i <= end && array[i] > pos);
             while (--j >= start && array[j] < pos);
