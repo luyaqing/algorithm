@@ -38,6 +38,34 @@ public class 合并有序数组 {
         }
     }
 
+    /**
+     * 这个是新建一个数组的解法
+     * @param a
+     * @param b
+     * @return
+     */
+    public static int[] mergeTwoSortedArray(int[] a, int[] b) {
+        int length = a.length + b.length;
+        int[] mergedArr = new int[length];
+
+        int aIndex = a.length - 1;
+        int bIndex = b.length - 1;
+        int mergeIndex = length - 1;
+
+        while (aIndex >= 0 && bIndex >= 0) {
+            mergedArr[mergeIndex--] = a[aIndex] > b[bIndex] ? a[aIndex--] : b[bIndex--];
+        }
+
+        while (aIndex >= 0) {
+            mergedArr[mergeIndex--] = a[aIndex--];
+        }
+
+        while (bIndex >= 0) {
+            mergedArr[mergeIndex--] = b[bIndex--];
+        }
+        return mergedArr;
+    }
+
     public static void main(String[] args) {
 
         int[] A = new int[]{1,2,8,0,0,0,0};
@@ -45,7 +73,11 @@ public class 合并有序数组 {
         int[] B = new int[]{4,5,6,7};
         int bSize = 4;
         mergeSortArray(A, aSize, B, bSize);
-
         System.out.println(Arrays.toString(A));
+
+        int[] A2 = new int[]{1,2,8};
+        int[] B2 = new int[]{4,5,6,7};
+        int[] mergeArray = mergeTwoSortedArray(A2, B2);
+        System.out.println(Arrays.toString(mergeArray));
     }
 }
