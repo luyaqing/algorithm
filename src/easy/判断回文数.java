@@ -18,14 +18,17 @@ public class 判断回文数 {
         // 这个地方把负数和110 或者100情况排除掉
         if(x<0 || (x!=0 && x%10==0))
             return false;
+
         int res = 0;
+
         while(x>res){
-            res = res*10 + x%10;
+            res = res*10 + x%10;   // 我的出错点： 这里的x写成了res， 想清楚取得是谁的末尾。
             x = x/10;
         }
+
         return x==res || x==res/10;
     }
     public static void main(String[] args) {
-        System.out.println(isPalindrome(10));
+        System.out.println(isPalindrome(1232));
     }
 }
