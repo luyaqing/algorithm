@@ -33,7 +33,8 @@ public class 合并有序数组 {
         }
 
         // 这里为啥没有检查aIndex， 是因为已经是有序的了， 并不需要检查A的内容了
-        while (bIndex >= 0) {
+        while (bIndex >= 0) {    // 我之前写出的代码是 A[bIndex--] = B[bIndex--] 测试通过了， 但是其实没走进去
+                                 // 其实是不对的，那么会相当于bIndex减了两次， 跳过了一个，草
             A[index--] = B[bIndex--];
         }
     }
