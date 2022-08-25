@@ -23,12 +23,30 @@ public class 判断回文数 {
 
         while(x>res){
             res = res*10 + x%10;   // 我的出错点： 这里的x写成了res， 想清楚取得是谁的末尾。
+                                   // 第二个出错点： = 写成了 +=,  为啥要写成 += 呢？  毫无道理!
             x = x/10;
         }
 
         return x==res || x==res/10;
     }
     public static void main(String[] args) {
-        System.out.println(isPalindrome(1232));
+        System.out.println(isPalindrome2(1222221));
+    }
+
+
+    public static boolean isPalindrome2(int x) {
+
+        if (x < 0 || x % 10 == 0) {
+            return false;
+        }
+
+        int result = 0;
+
+        while (result < x) {
+            result = 10 * result + x %10;
+            x = x / 10;
+        }
+
+        return x == result || result / 10 == x;
     }
 }
