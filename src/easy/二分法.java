@@ -20,6 +20,7 @@ public class 二分法 {
 
         // 我的易错点： while(low < high) 这样是不对的， 1 2 3 的时候会出错， mid + 1  = high了, 跳出循环了。
         // 只能这么写合适，因为low的值会一直逼近最右端的
+        // 出错+1
         while (low < nums.length - 1) {
             int mid = (low + high) / 2;
             if (target == nums[mid]) {
