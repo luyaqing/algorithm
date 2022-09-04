@@ -21,6 +21,7 @@ public class 糖和糖纸的问题 {
         while (tangzhinum >= 3) {
             count = count + tangzhinum / 3;
             tangzhinum = tangzhinum  % 3 + tangzhinum / 3;
+            // 不能是 +=, 必须是 =
         }
 
         return count;
