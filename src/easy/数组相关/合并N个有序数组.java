@@ -1,4 +1,4 @@
-package easy;
+package easy.数组相关;
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.ArrayList;

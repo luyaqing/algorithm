@@ -1,4 +1,4 @@
-package easy;
+package easy.数组相关;
 
 /**
  * @Description 阿里一面的算法， 面试的时候使用的三重for循环写的，但是这个效率太低了

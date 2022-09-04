@@ -1,4 +1,4 @@
-package easy;
+package 面试遇到的;
 
 /**
  * @Description 是一个典型的二分法;

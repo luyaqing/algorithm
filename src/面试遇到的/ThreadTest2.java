@@ -1,4 +1,4 @@
-package easy;
+package 面试遇到的;
 
 
 import java.util.concurrent.CountDownLatch;

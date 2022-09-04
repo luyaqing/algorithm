@@ -1,4 +1,4 @@
-package easy;
+package easy.数组相关;
 
 import java.util.Arrays;
 

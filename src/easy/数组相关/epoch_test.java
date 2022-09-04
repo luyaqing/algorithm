@@ -1,6 +1,4 @@
-package easy;
-
-import 漫画算法.BitMap的巧用;
+package easy.数组相关;
 
 import java.util.Arrays;
 

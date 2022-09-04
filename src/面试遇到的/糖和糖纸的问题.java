@@ -1,4 +1,4 @@
-package easy;
+package 面试遇到的;
 
 /**
  * @Description 一块钱可以卖一颗糖， 三张糖纸可以换一颗糖，输入X元， 可以吃几颗糖
