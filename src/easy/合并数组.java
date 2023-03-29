@@ -20,7 +20,7 @@ public class 合并数组 {
     public static int[] result = new int[3];
 
     public static void getAllArrays(int[][] arr, int depth) {
-        int[] result1 = new int[arr.length];
+
         for (int i = 0; i < arr[depth].length; i++) {
             result[depth] = arr[depth][i];
             if (depth != arr.length - 1) {
