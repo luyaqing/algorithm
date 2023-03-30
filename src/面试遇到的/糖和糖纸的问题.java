@@ -11,6 +11,7 @@ public class 糖和糖纸的问题 {
     public static void main(String[] args) {
 
         System.out.println(getMaxSugarCount(10));
+        System.out.println(getSugarPaperNumber(10));
     }
 
     public static int getMaxSugarCount(int x) {
@@ -21,9 +22,21 @@ public class 糖和糖纸的问题 {
         while (tangzhinum >= 3) {
             count = count + tangzhinum / 3;
             tangzhinum = tangzhinum  % 3 + tangzhinum / 3;
-            // 不能是 +=, 必须是 =
+            // 出错点： +=，  这里怎么可能是+=呢， 直接就是 = 啊， 因为之前的糖纸被消耗了啊
         }
 
+        return count;
+    }
+
+
+    public static int getSugarPaperNumber(int x) {
+        int sugarPaperNum = x;
+        int count = x;
+
+        while (sugarPaperNum >=3) {
+            count += sugarPaperNum / 3;
+            sugarPaperNum = sugarPaperNum % 3 + sugarPaperNum / 3;
+        }
         return count;
     }
 }
